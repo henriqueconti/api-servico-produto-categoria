@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://carocha:qEIGrUQgNVWWTWWR@cluster0.4nrmxh0.mongodb.net/test");
+mongoose.connect("mongodb+srv://hnttm:mrls0200cluster0.5hjkvb.mongodb.net/categoriaproduto");
 
 app.use(express.json());
 
