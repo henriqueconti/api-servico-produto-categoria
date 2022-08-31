@@ -39,8 +39,12 @@ exports.getById = async (req, res, next) => {
 
 exports.delete = async (req, res, next)=>{
     const id = req.params.id;
-
-    await repositoryCategory.delete(id);
     
-    res.status(200).send({message: "Categoria deletada com sucesso!"})
+    try{
+        await repositoryCategory.delete(id);
+    
+        res.status(200).send({message: "Categoria deletada com sucesso!"})
+    }catch(erro){
+        res.status(400).send({message: "Erro ao deletar!"});
+    }
 }
